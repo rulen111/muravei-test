@@ -29,9 +29,7 @@ def count_accessible_cells(start = (1000, 1000)):
     :param start: starting coordinates (tuple)
     :return: number of cells (int)
     """
-    visited = set()
-    queue = deque([start])
-    visited.add(start)
+    visited, queue = {start}, deque([start])
     directions = [(1, 0), (-1, 0), (0, 1), (0, -1)]
     
     while queue:
